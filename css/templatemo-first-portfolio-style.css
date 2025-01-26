@@ -39,6 +39,13 @@ https://templatemo.com/tm-578-first-portfolio
   --font-weight-normal:           400;
   --font-weight-medium:           500;
   --font-weight-bold:             700;
+  --skin-color: #14B789;
+  --bg-black-900: #f2f2fc;
+  --bg-black-100: #fdf9ff;
+  --bg-black-50: #e8dfec;
+  --text-black-900: #302e4d;
+  --text-black-700: #504e70;
+  --text-black-400: #6461865e;
 }
 
 body {
@@ -135,7 +142,7 @@ a:hover {
 }
 
 .section-padding {
-  padding-top: 120px;
+  padding-top: 50px;
   padding-bottom: 120px;
 }
 
@@ -1185,3 +1192,35 @@ strong {
   }
 }
 
+.technology-item {
+  position: relative;
+  display: inline-block;
+  text-align: center;
+}
+
+.technology-name {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.technology-item:hover .technology-name {
+  opacity: 1;
+}
+
+.technology-image {
+  max-width: 100px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  cursor: pointer;
+}
